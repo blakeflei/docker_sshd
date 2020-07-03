@@ -6,7 +6,9 @@ LABEL maintainer="Blake Fleischer <blakeflei@gmail.com>"
 
 # Install sshd
 RUN apt-get update && \
-    apt-get --yes install openssh-server rsync sudo && \
+    apt-get --yes install nano \
+    openssh-server \
+    sudo && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
